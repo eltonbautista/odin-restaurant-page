@@ -1,0 +1,32 @@
+@font-face {
+    font-family: jost;
+    src: url('./Jost-300-Light.otf');
+    font-style: normal;
+}
+
+* {
+    outline: 2px solid blue;
+}
+body {
+    background: black;
+}
+
+
+
+#body-content {
+    color: red;
+    font-family: jost, sans-serif;
+    min-height: 100vh;
+    width: 100vw;
+    background: url(./restaurant.jpg);
+    background-size: contain;
+    display: grid; 
+    grid-template-rows: 1fr 10fr 1fr;
+}
+
+header, footer {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
