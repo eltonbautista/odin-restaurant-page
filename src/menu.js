@@ -1,10 +1,14 @@
-
+import {content} from './load';
 
 export function menu() {
 
+const bodyContent = document.querySelector('#reso-content');
+
+function generate() {
+
     const body = document.createElement('div');
     body.classList.add('tab', 'menu');
-    content.resoContent.appendChild(body);
+    bodyContent.appendChild(body);
 
     const menuElements = [];
     for (let i = 0; i < 6; i++) {
@@ -14,12 +18,13 @@ export function menu() {
         }
         body.appendChild(menuElements[i]);
     };
-    [menuSides, menuMain, menuBev, menuFiller, menuMenu, menuResoName] = menuElements;
+    let [menuSides, menuMain, menuBev, menuFiller, menuMenu, menuResoName] = menuElements;
 
     const foodList = (function() {
 
-        function menuCreator(appendTo, ...food) {
+        function menuCreator(appendTo, menuItemName,...food) {
         const foodList = document.createElement('ul');
+        foodList.textContent = menuItemName;
         const foodItems = [];
         for (let i = 0; i < 3; i++) {
             foodItems.push(document.createElement('li'));
@@ -35,11 +40,18 @@ export function menu() {
     })();
 
     let menuItems = {
-        sides: foodList.menuCreator(menuSides, '$8 Yummy Eggs', '$12 Restaurant Wings', '$10 FeelsGood Potatoes'),
-        mains: foodList.menuCreator(menuMain, '$22 Trust Me Spaghetti', 
+        sides: foodList.menuCreator(menuSides, 'Sides', '$8 Yummy Eggs', '$12 Restaurant Wings', '$10 FeelsGood Potatoes'),
+        mains: foodList.menuCreator(menuMain, 'Mains', '$22 Trust Me Spaghetti', 
         '$45 Over the TOP Steak', '$100 This Is The One Platter'),
-        beverages: foodList.menuCreator(menuBev, '$6 "Tastes Like Water Lemonade"', '$4 Sodie Pop', '$5 Choccy Milk'),
-        lorems: foodList.menuCreator(menuFiller, '$5 Lorem ipsum dolor sit amet.', '$32 Lorem Can Cook Seafood', '$13 Randomizer'),
+        beverages: foodList.menuCreator(menuBev, 'Beverages', '$6 "Tastes Like Water Lemonade"', '$4 Sodie Pop', '$5 Choccy Milk'),
+        lorems: foodList.menuCreator(menuFiller, 'Lorems', '$5 Lorem ipsum dolor sit amet.', '$32 Lorem Can Cook Seafood', '$13 Randomizer'),
     }; 
+    menuMenu.textContent = 'Menu'
+    menuResoName = 'The Restaurant Place'
+}
 
+    content.menuButton.addEventListener('click', (e) => {
+        bodyContent.innerText = '';
+        generate();
+    })
 };

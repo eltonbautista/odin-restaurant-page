@@ -1,6 +1,7 @@
-export const bodyContent = document.querySelector('#body-content');
+import menu from './menu'
 
 export const content = (function() {
+    const bodyContent = document.querySelector('#body-content');
 
     const bodyContentArray = [document.createElement('header'), document.createElement('div'),
     document.createElement('footer')];
@@ -11,34 +12,24 @@ export const content = (function() {
         bodyContent.appendChild(element);
         }
     })();
-
+    resoContent.setAttribute('id', 'reso-content')
     footer.textContent = 'Footer';
     const buttonLabels = ['Home', 'Menu', 'Contact Us'];
     const headerButtonArray = [];
         for (let i = 0; i < 3; i++) {
             headerButtonArray.push(document.createElement('button'));
+            headerButtonArray[i].setAttribute('id', `button ${i}`)
             headerButtonArray[i].innerText = buttonLabels[i];
             header.appendChild(headerButtonArray[i]);
         }
     const [homeButton, menuButton, contactButton] = headerButtonArray;
 
-    return {
-        resoContent,
-    }
-})();
-
-
-
-
-
-
-
-export function homeContent() {
+    function homeContent() {
 
 
     const body = document.createElement('div');
     body.classList.add('tab', 'home');
-    content.resoContent.appendChild(body);
+    resoContent.appendChild(body);
 
     const homeElementsArray = [];
     ((e) => {
@@ -76,4 +67,19 @@ export function homeContent() {
         body.appendChild(homeElementsArray[i])
         }
     })();
-}; 
+    // return body;
+}
+homeContent();
+
+homeButton.addEventListener('click', (e) => {
+    resoContent.innerText = '';
+    homeContent();
+})
+
+    return {
+        resoContent,
+        menuButton
+    }
+})();
+
+ 
