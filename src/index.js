@@ -1,7 +1,8 @@
 import './style.css';
 import Icon from './restaurant.jpg'
-import {bodyContent, content} from './load.js'
+import {bodyContent, content, homeContent} from './load.js'
 
 
-content();
+// content();
 
+homeContent();

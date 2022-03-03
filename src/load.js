@@ -1,6 +1,6 @@
 export const bodyContent = document.querySelector('#body-content');
 
-export function content() {
+export const content = (function() {
 
     const bodyContentArray = [document.createElement('header'), document.createElement('div'),
     document.createElement('footer')];
@@ -31,10 +31,23 @@ export function content() {
         };
     })();
 
-// ------------------------------------------------------------
+    return {
+        resoContent
+    }
+})();
+
+
+
+
+
+
+
+export function homeContent() {
+
 
     const body = document.createElement('div');
-    resoContent.appendChild(body);
+    body.classList.add('tab', 'home');
+    content.resoContent.appendChild(body);
 
     const homeElementsArray = [];
     ((e) => {
@@ -65,56 +78,11 @@ export function content() {
         } 
     })();
     resoHours.appendChild(resoHoursUnorderedList);
-    resoAddress.textContent = '123 Notareal Address, Notreal, Knotreel';
+    resoAddress.textContent = '123 Notareal Ahdres, Snotreal, Defknotreel';
 
     ((e) => {
         for (let i = 0; i < 4; i++) {
         body.appendChild(homeElementsArray[i])
         }
     })();
-};
-
-
-
-
-
-
-
-// export function homeContent() {
-
-
-//     const body = document.createElement('div');
-//     header.append(body);
-
-//     const homeElementsArray = [];
-//     ((e) => {
-//         for (let i = 0; i < 4; i++) {
-//             homeElementsArray.push(document.createElement('div'));
-//         }
-//     })();
-    
-//     const [resoName, resoDescription, resoHours, resoAddress] = homeElementsArray;
-
-//     resoName.textContent = 'The Restaurant Place';
-//     resoDescription.textContent = 
-//     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, enim officia. Porro voluptatibus libero animi?'
-    
-//     const resoHoursUnorderedList = document.createElement('ul');
-    
-
-//     resoHoursArray = ['Sunday: 8am - 8pm', 'Monday: 6am - 6pm', 'Tuesday: 6am - 6pm', 'Wednesday: 6am - 6pm',
-//                       'Thursday: 6am - 10pm', 'Friday: 6am - 10pm', 'Saturday: 8am - 10pm'];
-
-//     let resoHoursList;
-//     ((e) => {
-//         for (let i = 0; i < 8; i++) {
-//             resoHoursList = document.createElement('li');
-//             resoHoursList.textContent = resoHoursArray[i];
-//             resoHoursUnorderedList.appendChild(resoHoursList);
-//         }
-//     })();
-
-//     resoHours.appendChild(resoHoursUnorderedList);
-
-//     resoAddress.textContent = '123 NotAReal Address, NotReal, Knotreel'
-// }; 
+}; 
