@@ -26,7 +26,7 @@ export function menu() {
 
     const foodList = (function() {
 
-        function menuCreator(...food) {
+        function menuCreator(appendTo, ...food) {
         const foodList = document.createElement('ul');
         const foodItems = [];
         for (let i = 0; i < 3; i++) {
@@ -34,7 +34,8 @@ export function menu() {
             foodList.appendChild(foodItems[i]);
             foodItems[i].textContent = food[i];
         }
-        return foodList;
+        
+        appendTo.appendChild(foodList);
     }
 
         return {
@@ -42,6 +43,6 @@ export function menu() {
         }
     })();
 
-    let sideFoods = foodList.menuCreator('$8 Yummy Eggs', '$12 Restaurant Wings', '$10 FeelsGood Potatoes'); 
+    let foods = foodList.menuCreator(menuSides, '$8 Yummy Eggs', '$12 Restaurant Wings', '$10 FeelsGood Potatoes'); 
 
 };
