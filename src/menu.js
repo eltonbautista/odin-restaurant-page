@@ -15,14 +15,6 @@ export function menu() {
         body.appendChild(menuElements[i]);
     };
     [menuSides, menuMain, menuBev, menuFiller, menuMenu, menuResoName] = menuElements;
-    // Each of our food items will be a list of 3 foods. We want a list that we can reuse. 
-    const foodList = {
-        unorderedList: document.createElement('ul'),
-
-    }
-    
-    // now we have an array of li. Changing the values of those indices will affect the contents of the array
-    // but ultimately our foodList should be a list of food items.  
 
     const foodList = (function() {
 
@@ -34,7 +26,6 @@ export function menu() {
             foodList.appendChild(foodItems[i]);
             foodItems[i].textContent = food[i];
         }
-        
         appendTo.appendChild(foodList);
     }
 
@@ -43,6 +34,12 @@ export function menu() {
         }
     })();
 
-    let foods = foodList.menuCreator(menuSides, '$8 Yummy Eggs', '$12 Restaurant Wings', '$10 FeelsGood Potatoes'); 
+    let menuItems = {
+        sides: foodList.menuCreator(menuSides, '$8 Yummy Eggs', '$12 Restaurant Wings', '$10 FeelsGood Potatoes'),
+        mains: foodList.menuCreator(menuMain, '$22 Trust Me Spaghetti', 
+        '$45 Over the TOP Steak', '$100 This Is The One Platter'),
+        beverages: foodList.menuCreator(menuBev, '$6 "Tastes Like Water Lemonade"', '$4 Sodie Pop', '$5 Choccy Milk'),
+        lorems: foodList.menuCreator(menuFiller, '$5 Lorem ipsum dolor sit amet.', '$32 Lorem Can Cook Seafood', '$13 Randomizer'),
+    }; 
 
 };
