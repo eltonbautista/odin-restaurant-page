@@ -47,7 +47,7 @@ function generate() {
         lorems: foodList.menuCreator(menuFiller, 'Lorems', '$5 Lorem ipsum dolor sit amet.', '$32 Lorem Can Cook Seafood', '$13 Randomizer'),
     }; 
     menuMenu.textContent = 'Menu'
-    menuResoName = 'The Restaurant Place'
+    menuResoName.textContent = 'The Restaurant Place'
 }
 
     content.menuButton.addEventListener('click', (e) => {

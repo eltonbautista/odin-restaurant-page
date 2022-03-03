@@ -78,7 +78,8 @@ homeButton.addEventListener('click', (e) => {
 
     return {
         resoContent,
-        menuButton
+        menuButton,
+        contactButton
     }
 })();
 
