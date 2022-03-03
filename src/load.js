@@ -12,27 +12,18 @@ export const content = (function() {
         }
     })();
 
-    footer.textContent = 'Footer'
-
+    footer.textContent = 'Footer';
+    const buttonLabels = ['Home', 'Menu', 'Contact Us'];
     const headerButtonArray = [];
-    ((e) => {
         for (let i = 0; i < 3; i++) {
             headerButtonArray.push(document.createElement('button'));
-        }
-    })();
-
-    const [homeButton, menuButton, contactButton] = headerButtonArray;
-    const buttonLabels = ['Home', 'Menu', 'Contact Us'];
-
-    ((e) => {
-        for (let i = 0; i < 3; i++) {
             headerButtonArray[i].innerText = buttonLabels[i];
             header.appendChild(headerButtonArray[i]);
-        };
-    })();
+        }
+    const [homeButton, menuButton, contactButton] = headerButtonArray;
 
     return {
-        resoContent
+        resoContent,
     }
 })();
 
