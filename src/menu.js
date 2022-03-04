@@ -1,4 +1,7 @@
+
 export const menu = (function() {
+
+
 const menuButton = document.querySelector('.button1')
 const bodyContent = document.querySelector('#reso-content');
 
@@ -11,6 +14,7 @@ function generate() {
     const menuElements = [];
     for (let i = 0; i < 6; i++) {
         menuElements.push(document.createElement('div'));
+
         if(i > 0 && i < 4) {
             menuElements[i].classList.add(`food${i}`);    
         }
@@ -44,7 +48,9 @@ function generate() {
         beverages: foodList.menuCreator(menuBev, 'Beverages', '$6 "Tastes Like Water Lemonade"', '$4 Sodie Pop', '$5 Choccy Milk'),
         lorems: foodList.menuCreator(menuFiller, 'Lorems', '$5 Lorem ipsum dolor sit amet.', '$32 Lorem Can Cook Seafood', '$13 Randomizer'),
     }; 
+
     menuMenu.textContent = 'The Food We Cook'
+
     menuResoName.textContent = 'The Restaurant Place'
 }
 
