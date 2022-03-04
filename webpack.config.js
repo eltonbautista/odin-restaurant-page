@@ -11,6 +11,7 @@ module.exports = {
     plugins: [
       new HtmlWebpackPlugin({
         title: 'Restaurant Project',
+        // template: 'dist/index.html',
       }),
     ],
     output: {

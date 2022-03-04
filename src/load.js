@@ -16,7 +16,7 @@ export const load =  (function() {
         }
     })();
     resoContent.setAttribute('id', 'reso-content')
-    footer.textContent = 'Footer';
+    footer.textContent = '';
     const buttonLabels = ['Home', 'Menu', 'Contact Us'];
     const headerButtonArray = [];
         for (let i = 0; i < 3; i++) {
@@ -44,10 +44,9 @@ export const load =  (function() {
     resoHoursUnorderedList.textContent = 'Hours of Operation';
     const [resoName, resoDescription, resoHours, resoAddress] = homeElementsArray;
 
-    resoName.textContent = 'The Restaurant Place';
+    resoName.textContent = '"The Restaurant Place"';
     resoDescription.textContent = 
-    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, enim officia. Porro voluptatibus libero animi?'
-    
+'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, eius aperiam officiis temporibus, consectetur quia nam inventore dolore assumenda ea minus eum? Quibusdam corrupti reiciendis fugiat a eum, aspernatur vero dolorum sit dolore necessitatibus nobis sapiente laboriosam, illo, reprehenderit explicabo possimus natus quae suscipit quia quod? Quae autem eius nemo et vitae quisquam! Ducimus nostrum ipsam eos expedita corporis eius. Sed sint voluptatibus placeat odio magnam excepturi voluptas veritatis impedit.'    
     
     
 

@@ -1,32 +1,170 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  * {
+    margin: 0;
+  }
+  html, body {
+    height: 100%;
+  }
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  input, button, textarea, select {
+    font: inherit;
+  }
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  #root, #__next {
+    isolation: isolate;
+  }
+  ul {
+      list-style: none;
+  }
+
+  button {
+      border-radius: 5px;
+  }
+
 @font-face {
     font-family: jost;
     src: url('./Jost-300-Light.otf');
     font-style: normal;
 }
 
-* {
-    outline: 2px solid blue;
-}
 body {
     background: black;
+    font-family: jost, sans-serif;
 }
 
 
 
 #body-content {
     color: white;
-    font-size: 24px;
+    font-size: 20px;
     font-family: jost, sans-serif;
     min-height: 100vh;
+    max-height: 100vh;
     width: 100vw;
     background: url(./restaurant.jpg);
-    background-size: contain;
     display: grid; 
-    grid-template-rows: 1fr 10fr 1fr;
+    grid-template-rows: 1fr 10fr 0.6fr;
 }
+
 
 header, footer {
     display: grid;
-    align-items: center;
+    align-items: end;
     justify-content: center;
+    grid-auto-flow: column;
+}
+
+header {
+    gap: 50px;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+footer {
+    font-size: 30px;
+}
+/* HOME TAB */
+
+.tab.home{
+    color: yellow;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    min-height: 100%;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 2px yellow;
+    font-weight: 600;
+}
+
+.tab.home div:first-child {
+    font-size: 50px;
+    margin-top: 20px;
+    text-shadow: -550px 0 3px white, 550px 0 3px white;
+}
+.tab.home div:nth-child(2) {
+    width: 35%;
+    font-weight: 900;
+}
+.tab.home div:last-child {
+    margin-bottom: 15px;
+}
+
+/* MENU TAB */
+
+.tab.menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "menu menu"
+    "sides beverages"
+    "main lorem"
+    "menuName menuName";
+    min-height: 100%;
+    align-items: center;
+    justify-items: center;
+    font-size: 24px;
+    color: red;
+    text-shadow: 0 0 5px wheat;
+    font-weight: 600;
+}
+
+.tab.menu div:first-child {
+    grid-area: menu;
+    color: yellow;
+    font-size: 45px;
+    position: absolute;
+    margin-bottom: 500px;
+    /* margin-top: 25px; */
+}
+.tab.menu .food1 {
+    grid-area: sides;
+}
+.tab.tab.menu .food2 {
+    grid-area: main;
+    color: yellow;
+    margin-left: 400px;
+}
+.tab.menu .food3 {
+    grid-area: beverages;
+}
+.tab.menu div:nth-child(5) {
+    grid-area: lorem;
+    color: yellow;
+    margin-right: 400px;
+}
+.tab.menu div:last-child {
+    grid-area: menuName;
+    font-size: 50px;
+    color: yellow;
+}
+
+/* CONTACT TAB */
+
+.tab.contact {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    min-height: 100%;
+    font-size: 35px;
+}
+
+.tab.contact div {
+    width: 300px;
+    font-weight: 900;
+    text-shadow: 0 3px 5px whitesmoke;
 }

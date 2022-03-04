@@ -15,8 +15,8 @@ export const contact = (function() {
         body.appendChild(contactArray[i]);
     }
 
-    contactArray[0].textContent = 'Person Incharge';
-    contactArray[1].textContent = 'Secondper Sonincharge';
+    contactArray[0].textContent = 'Milliam Willingham mwilli@notemail.com 123-123-1234';
+    contactArray[1].textContent = 'Mcintyre Laurenzi mlau@notemail.com 123-123-2345';
 }
 
     contactButton.addEventListener('click', (e) => {
