@@ -1,7 +1,7 @@
 import {content} from './load';
 
-export function menu() {
-
+export default (function() {
+const menuButton = document.querySelector('.button1')
 const bodyContent = document.querySelector('#reso-content');
 
 function generate() {
@@ -50,8 +50,8 @@ function generate() {
     menuResoName.textContent = 'The Restaurant Place'
 }
 
-    content.menuButton.addEventListener('click', (e) => {
+    menuButton.addEventListener('click', (e) => {
         bodyContent.innerText = '';
         generate();
     })
-};
+})();

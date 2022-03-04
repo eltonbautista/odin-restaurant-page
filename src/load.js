@@ -1,6 +1,6 @@
 import menu from './menu'
 
-export const content = (function() {
+export default (function() {
     const bodyContent = document.querySelector('#body-content');
 
     const bodyContentArray = [document.createElement('header'), document.createElement('div'),
@@ -18,7 +18,7 @@ export const content = (function() {
     const headerButtonArray = [];
         for (let i = 0; i < 3; i++) {
             headerButtonArray.push(document.createElement('button'));
-            headerButtonArray[i].setAttribute('id', `button ${i}`)
+            headerButtonArray[i].classList.add(`button${i}`)
             headerButtonArray[i].innerText = buttonLabels[i];
             header.appendChild(headerButtonArray[i]);
         }
@@ -67,7 +67,6 @@ export const content = (function() {
         body.appendChild(homeElementsArray[i])
         }
     })();
-    // return body;
 }
 homeContent();
 
@@ -76,11 +75,7 @@ homeButton.addEventListener('click', (e) => {
     homeContent();
 })
 
-    return {
-        resoContent,
-        menuButton,
-        contactButton
-    }
+    
 })();
 
  

@@ -1,12 +1,11 @@
 import './style.css';
 import Icon from './restaurant.jpg';
-import {bodyContent, content, homeContent} from './load.js';
-import {menu} from './menu.js';
-import {contact} from './contact.js';
+import contentDefault from './load.js';
+import menuDefault from './menu.js';
+import contactDefault from './contact.js';
 
 
 // content(menu);
-
 // homeContent();
-menu();
-contact();
+// menu();
+//contact();

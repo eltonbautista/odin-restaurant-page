@@ -1,6 +1,7 @@
-import {content} from './load';
+// import {content} from './load';
 
-export const contact = function() {
+export default (function() {
+    const contactButton = document.querySelector('.button2')
     const bodyContent = document.querySelector('#reso-content');
 
     function generate() {
@@ -19,8 +20,8 @@ export const contact = function() {
     contactArray[1].textContent = 'Secondper Sonincharge';
 }
 
-    content.contactButton.addEventListener('click', (e) => {
+    contactButton.addEventListener('click', (e) => {
         bodyContent.innerText = '';
         generate();
     })
-};
+})();
