@@ -1,6 +1,5 @@
-// import {content} from './load';
 
-export default (function() {
+export const contact = (function() {
     const contactButton = document.querySelector('.button2')
     const bodyContent = document.querySelector('#reso-content');
 

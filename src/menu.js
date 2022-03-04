@@ -1,4 +1,4 @@
-export default (function() {
+export const menu = function() {
 const menuButton = document.querySelector('.button1')
 const bodyContent = document.querySelector('#reso-content');
 
@@ -52,4 +52,4 @@ function generate() {
         bodyContent.innerText = '';
         generate();
     })
-})();
+};

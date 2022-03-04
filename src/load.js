@@ -1,8 +1,11 @@
 
 
-export default (function() {
-    const bodyContent = document.querySelector('#body-content');
-
+export const load =  (function() {
+    const body = document.querySelector('body');
+    const bodyContent = document.createElement('div');
+    bodyContent.setAttribute('id', 'body-content');
+    body.appendChild(bodyContent);
+    
     const bodyContentArray = [document.createElement('header'), document.createElement('div'),
     document.createElement('footer')];
     const [header, resoContent, footer] = bodyContentArray;

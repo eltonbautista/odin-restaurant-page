@@ -1,6 +1,7 @@
 import './style.css';
 import Icon from './restaurant.jpg';
-import contentDefault from './load.js';
-import menuDefault from './menu.js';
-import contactDefault from './contact.js';
+import {load} from './load.js';
+import {menu} from './menu.js';
+import {contact} from './contact.js';
 
+menu();
