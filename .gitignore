@@ -89,7 +89,11 @@ typings/
 # public
 
 # vuepress build output
+<<<<<<< HEAD
 
+=======
+.vuepress/
+>>>>>>> 330f0fb0751932d2eb8b4c0153f0ed27beab4de6
 
 # Serverless directories
 .serverless/
