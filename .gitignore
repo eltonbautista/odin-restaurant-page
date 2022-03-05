@@ -89,7 +89,7 @@ typings/
 # public
 
 # vuepress build output
-.vuepress/dist
+
 
 # Serverless directories
 .serverless/
@@ -102,4 +102,4 @@ typings/
 
 # TernJS port file
 .tern-port
-dist/
+
